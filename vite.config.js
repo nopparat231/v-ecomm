@@ -11,28 +11,6 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        charset: false
-      },
-      less: {
-        charset: false,
-      },
-    },
-    charset: false,
-    postcss: {
-      plugins: [{
-        postcssPlugin: 'internal:charset-removal',
-        AtRule: {
-          charset: (atRule) => {
-            if (atRule.name === 'charset') {
-              atRule.remove();
-            }
-          }
-        }
-      }],
-    },
-  }
+ css: { preprocessorOptions: { scss: { charset: false } } }
   
 })
