@@ -2,6 +2,7 @@
   "name": "v-ecomm",
   "version": "0.0.0",
   "scripts": {
+    "start": "npm run serve",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 5050"
