@@ -19,5 +19,5 @@ npm run build
 ```
 
 ### `Example`
-ดึงข่าวจาก Newsapi มาแสดง
+
 ![Ex page](https://github.com/nopparat231/v-ecomm/blob/main/img/Capture1.PNG)
