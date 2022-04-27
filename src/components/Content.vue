@@ -1,6 +1,15 @@
 <template>
+  <header class="bg-danger py-5">
+    <div class="container px-4 px-lg-5 my-5">
+      <div class="text-center text-white">
+        <h1 class="display-4 fw-bolder">Shop V style</h1>
+        <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage</p>
+      </div>
+    </div>
+  </header>
+
   <!-- Section-->
-  <section class="py-5">
+  <section class="py-5 position-relative">
     <div class="container px-4 px-lg-5">
       <div
         class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
@@ -8,41 +17,44 @@
         <!-- Product-->
 
         <div class="col mb-5" v-for="item in items" :key="item.id">
-          <div class="card h-100">
-            <!-- Product image-->
-            <img class="card-img-top" :src="item.url" alt="..." />
-            <!-- Product details-->
-            <div class="card-body p-2">
-              <div class="text-center">
-                <!-- Product name-->
-                <div class="pull-left name-price">
-                  <span class="fw-light fs-5">Lorem ipsum dolor sit amet.</span>
+          <router-link :to="{ name: 'Pdetail', params: { id: item.id } }">
+            <div class="card h-100">
+              <!-- Product image-->
+              <img class="card-img-top" :src="item.url" alt="..." />
+              <!-- Product details-->
+              <div class="card-body p-2">
+                <div class="text-center">
+                  <!-- Product name-->
+                  <div class="pull-left name-price">
+                    <span class="fw-light fs-5"
+                      >Lorem ipsum dolor sit amet.</span
+                    >
+                  </div>
+
+                  <!-- Product price-->
+                </div>
+              </div>
+              <!-- Product actions-->
+              <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
+                <div class="pull-left m-price">
+                  <span class="fs-6 text-muted text-decoration-line-through"
+                    >฿95</span
+                  >
+                  <span class="fs-6 s-price"> ฿25</span>
                 </div>
 
-                <!-- Product price-->
+                <div class="c-star">
+                  <i class="bi bi-heart c-hart"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                  ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                  ><i class="bi bi-star-half"></i>
+                </div>
+
+                <div class="c-location fw-lighter">จังหวัดกรุงเทพมหานคร</div>
               </div>
+
             </div>
-            <!-- Product actions-->
-            <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
-              <div class="pull-left m-price">
-                <span class="fs-6 text-muted text-decoration-line-through"
-                  >฿95</span
-                >
-                <span class="fs-6 s-price"> ฿25</span>
-              </div>
-
-              <div class="c-star">
-                <i class="bi bi-heart c-hart"></i>
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-half"></i>
-              </div>
-
-              <div class="c-location fw-lighter">จังหวัดกรุงเทพมหานคร</div>
-            </div>
-
-            <!-- Buy btn -->
-          </div>
+          </router-link>
         </div>
         <!-- Product-->
       </div>
@@ -114,10 +126,21 @@ export default {
       ],
     };
   },
+  methods: {
+    ShowID(id) {
+      alert(id);
+    },
+    Rproduct(id) {
+      this.$router.push("/Pdetail");
+    },
+  },
 };
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+}
 .card {
   border-radius: 4px;
   background: #fff;

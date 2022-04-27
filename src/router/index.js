@@ -16,7 +16,7 @@ const routes = [
         component: Home
     },
     {
-        path: "/Pdetail",
+        path: "/Pdetail/:id",
         name: "Pdetail",
         component: Pdetail
     }
