@@ -1,5 +1,10 @@
 # v-ecomm
-
+# `UptoHeroku`
+```bash
+heroku login
+heroku git:remote -a v-ecomm
+git push heroku main
+```
 ## Project Setup
 
 ```sh
