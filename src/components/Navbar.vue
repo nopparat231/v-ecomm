@@ -1,9 +1,10 @@
 <template>
   <div>
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-danger ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
       <div class="container px-4 px-lg-5">
-        <a class="navbar-brand text-white" href="#!">My V Shop</a>
+        <router-link class="navbar-brand text-white" to="/"> My V Shop </router-link>
+        
         <button
           class="navbar-toggler"
           type="button"
@@ -18,9 +19,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
             <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="#!">Home</a>
+      
+              <router-link class="nav-link active text-white" to="/Home">Home</router-link>
+              
             </li>
-            <li class="nav-item"><a class="nav-link text-white" href="#!">About</a></li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#!">About</a>
+            </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle text-white"
@@ -55,7 +60,7 @@
         <div class="text-center text-white">
           <h1 class="display-4 fw-bolder">Shop V style</h1>
           <p class="lead fw-normal text-white-50 mb-0">
-            With this shop hompeage 
+            With this shop hompeage
           </p>
         </div>
       </div>
