@@ -20,7 +20,7 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
             <li class="nav-item">
       
-              <router-link class="nav-link active text-white" to="/Home">Home</router-link>
+              <router-link class="nav-link active text-white" to="/">Home</router-link>
 
             </li>
             <li class="nav-item">

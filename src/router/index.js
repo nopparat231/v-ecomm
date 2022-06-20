@@ -6,13 +6,9 @@ import NotFoundVue from '../components/NotFound.vue';
 
 const routes = [
 
+ 
     {
         path: "/",
-        name: "Content",
-        component: Content
-    },
-    {
-        path: "/Home",
         name: "Home",
         component: Home
     },
